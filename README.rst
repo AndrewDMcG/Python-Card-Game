@@ -13,9 +13,8 @@ Python-Card-Game
         :alt: Documentation Status
 
 
-A simple python module that implements a few classes need to contruct a card game
-
-Card game using pygame.  Uses a custom card engine to help with GUI
+A simple python module that implements a few classes needed to construct a card game.
+Also uses a custom card engine to help with GUI by leveraging PyGame.
 
 * Free software: ISC license
 * Documentation: https://Python-Card-Game.readthedocs.org.
