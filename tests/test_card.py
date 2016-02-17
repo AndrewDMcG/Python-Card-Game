@@ -78,7 +78,7 @@ class TestCard(unittest.TestCase):
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
       print "got BadCardParamsExepction on test 2"
-      caught_exception = True
+      # caught_exception = True
     except Exception as e:
       raise
 
