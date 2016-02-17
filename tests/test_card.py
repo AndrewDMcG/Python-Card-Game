@@ -31,7 +31,7 @@ class TestCard(unittest.TestCase):
     try:
       c = Card()
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 1"
+      print "got BadCardParamsExepction on test 0"
       caught_exception = True
     else:
       pass
@@ -62,6 +62,72 @@ class TestCard(unittest.TestCase):
 
     self.assertIsNotNone(c, msg='failure in Card constructor for simple configuration')
 
+  def test_card_exception_bad_attr(self):
+    # tests for individual attribute value greater than its particular max
+    card_setup = {
+        "gold": 0,
+        "diplomacy": 0,
+        "stealth": 10,
+        "might": 0,
+        "victory_point": 2,
+        "effect": "None",
+    }
+    # TODO: DREW you fill in this one
+    caught_exception = False
+    try:
+      c = Card(**card_setup)
+    except BadCardParamsExepction as e:
+      print "got BadCardParamsExepction on test 2"
+      caught_exception = True
+    except Exception as e:
+      raise
+
+    self.assertTrue(caught_exception, msg="Failed to catch bad attribute exception")
+
+  def test_card_exception_attr_sum(self):
+    # tests for card_sum(more than 6)
+    card_setup = {
+        "gold": 0,
+        "diplomacy": 4,
+        "stealth": 4,
+        "might": 0,
+        "victory_point": 2,
+        "effect": "None",
+    }
+    # TODO: DREW you fill in this one
+    caught_exception = False
+    try:
+      c = Card(**card_setup)
+    except BadCardParamsExepction as e:
+      print "got BadCardParamsExepction on test 3"
+      caught_exception = True
+    except Exception as e:
+      raise
+
+    self.assertTrue(caught_exception, msg="Failed to catch attribute sum more than 6")
+
+  def test_card_exception_even_sum(self):
+    # tests for even resources
+    card_setup = {
+        "gold": 0,
+        "diplomacy": 3,
+        "stealth": 2,
+        "might": 0,
+        "victory_point": 2,
+        "effect": "None",
+    }
+
+    caught_exception = False
+    try:
+      c = Card(**card_setup)
+    except BadCardParamsExepction as e:
+      print "got BadCardParamsExepction on test 4"
+      caught_exception = True
+    except Exception as e:
+      raise
+
+    self.assertTrue(caught_exception, msg="Failed to catch even sum exception")
+
   def test_card_exception_non_zero_count(self):
     card_setup = {
         "gold": 0,
@@ -75,48 +141,12 @@ class TestCard(unittest.TestCase):
     try:
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 1"
+      print "got BadCardParamsExepction on test 5"
       caught_exception = True
     except Exception as e:
       raise
 
     self.assertTrue(caught_exception, msg="Failed to catch non_zero_count exception")
-
-  def test_card_exception_bad_attr(self):
-    # tests for card_sum(more than 6)
-    card_setup = {
-        "gold": 0,
-        "diplomacy": 0,
-        "stealth": 10,
-        "might": 0,
-        "victory_point": 2,
-        "effect": "None",
-    }
-    # TODO: DREW you fill in this one
-
-  def test_card_exception_attr_sum(self):
-    # tests for card_sum(more than 6)
-    card_setup = {
-        "gold": 0,
-        "diplomacy": 10,
-        "stealth": 2,
-        "might": 0,
-        "victory_point": 2,
-        "effect": "None",
-    }
-    # TODO: DREW you fill in this one
-
-  def test_card_exception_even_sum(self):
-    # tests for even resources
-    card_setup_test_3 = {
-        "gold": 0,
-        "diplomacy": 3,
-        "stealth": 2,
-        "might": 0,
-        "victory_point": 2,
-        "effect": "None",
-    }
-    # TODO: DREW you fill in this one
 
 if __name__ == '__main__':
   import sys
