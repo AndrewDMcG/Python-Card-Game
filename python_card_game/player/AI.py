@@ -10,7 +10,7 @@ Example:
   sections. Sections support any reStructuredText formatting, including
   literal blocks::
 
-      $ python __init__.py
+      $ python AI.py
 
 Section breaks are created by simply resuming unindented text. Section breaks
 are also implicitly created anytime a new section starts.
@@ -31,7 +31,7 @@ Attributes:
 # @Author: Mathew Cosgrove
 # @Date:   2016-01-21 08:40:09
 # @Last Modified by:   cosgrma
-# @Last Modified time: 2016-01-21 08:53:58
+# @Last Modified time: 2016-01-21 11:52:53
 # REF: http://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html#example-google
 # REF: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
 
