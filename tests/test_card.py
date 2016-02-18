@@ -78,7 +78,7 @@ class TestCard(unittest.TestCase):
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
       print "got BadCardParamsExepction on test 2"
-      # caught_exception = True
+      caught_exception = True
     except Exception as e:
       raise
 
@@ -131,7 +131,7 @@ class TestCard(unittest.TestCase):
   def test_card_exception_non_zero_count(self):
     card_setup = {
         "gold": 0,
-        "diplomacy": 0,
+        "diplomacy": 1,
         "stealth": 2,
         "might": 3,
         "victory_point": 2,
