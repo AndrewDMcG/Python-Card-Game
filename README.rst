@@ -5,8 +5,8 @@ Python-Card-Game
 .. image:: https://img.shields.io/pypi/v/Python-Card-Game.svg
         :target: https://pypi.python.org/pypi/Python-Card-Game
 
-.. image:: https://travis-ci.org/cosgroma/Python-Card-Game.svg?branch=master
-        :target: https://travis-ci.org/cosgroma/Python-Card-Game
+.. image:: https://travis-ci.org/AndrewDMcG/Python-Card-Game.svg?branch=master
+        :target: https://travis-ci.org/AndrewDMcG/Python-Card-Game
 
 .. image:: http://readthedocs.org/projects/python-card-game/badge/?version=latest
         :target: http://python-card-game.readthedocs.org/en/latest/?badge=latest
