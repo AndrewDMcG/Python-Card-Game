@@ -131,7 +131,7 @@ class TestCard(unittest.TestCase):
   def test_card_exception_non_zero_count(self):
     card_setup = {
         "gold": 0,
-        "diplomacy": 1,
+        "diplomacy": 0,
         "stealth": 2,
         "might": 3,
         "victory_point": 2,
