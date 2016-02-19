@@ -57,3 +57,5 @@ docs/_build/
 
 # PyBuilder
 target/
+docs/modules.rst
+docs/python_card_game.rst
