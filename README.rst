@@ -2,33 +2,25 @@
 Python-Card-Game
 ===============================
 
+.. image:: https://api.codacy.com/project/badge/grade/22ce71dc400544f49178ad47835cdc50
+  :target: https://www.codacy.com/app/cosgroma/Python-Card-Game
+  :alt: Codacy Badge
+
 .. image:: https://img.shields.io/pypi/v/Python-Card-Game.svg
-        :target: https://pypi.python.org/pypi/Python-Card-Game
+  :target: https://pypi.python.org/pypi/Python-Card-Game
 
 .. image:: https://travis-ci.org/AndrewDMcG/Python-Card-Game.svg?branch=master
-        :target: https://travis-ci.org/AndrewDMcG/Python-Card-Game
+  :target: https://travis-ci.org/AndrewDMcG/Python-Card-Game
 
 .. image:: http://readthedocs.org/projects/python-card-game/badge/?version=latest
-        :target: http://python-card-game.readthedocs.org/en/latest/?badge=latest
-        :alt: Documentation Status
-
+  :target: http://python-card-game.readthedocs.org/en/latest/?badge=latest
+  :alt: Documentation Status
 
 A simple python module that implements a few classes needed to construct a card game.
 Also uses a custom card engine to help with GUI by leveraging PyGame.
 
 * Free software: ISC license
 * Documentation: https://Python-Card-Game.readthedocs.org.
-
-Setup
-------------------
-
-use the requirements document in CardEngine and run the following
-
-$ pip install `cat pycardgame.req`
-
-let me know if you have issues getting your python configured
-Mine is: Python 2.7.10 (default, May 23 2015, 09:44:00) [MSC v.1500 64 bit (AMD64)] on win32 We don't want python-3000
-
 
 Features
 --------
@@ -42,17 +34,3 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
-
-For Fun
-------------------
-
-Checkout markdown developed by daringfireball_.
-
-.. _daringfireball: https://daringfireball.net/projects/markdown/syntax
-
-
-
-
-
-
