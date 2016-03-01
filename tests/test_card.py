@@ -18,6 +18,19 @@ import unittest
 from python_card_game.engine import Card, BadCardParamsExepction
 
 
+def card_setup_runner(setup_dict):
+  c = None
+  try:
+    c = Card(**setup_dict)
+  except BadCardParamsExepction as e:
+    pass
+    # print "got BadCardParamsExepction on test 1"
+    # return True
+  except Exception as e:
+    raise
+  return c
+
+
 class TestCard(unittest.TestCase):
 
   def setUp(self):
@@ -29,9 +42,9 @@ class TestCard(unittest.TestCase):
   def test_card_defaults(self):
     caught_exception = False
     try:
-      c = Card()
+      Card()
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 0"
+      # print "got BadCardParamsExepction on test 0"
       caught_exception = True
     else:
       pass
@@ -51,15 +64,15 @@ class TestCard(unittest.TestCase):
         "effect": "None",
     }
 
-    caught_exception = False
-    try:
-      c = Card(**card_setup)
-    except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 1"
-      caught_exception = True
-    except Exception as e:
-      raise
-
+    # caught_exception = False
+    # try:
+    #   c = Card(**card_setup)
+    # except BadCardParamsExepction as e:
+    #   # print "got BadCardParamsExepction on test 1"
+    #   caught_exception = True
+    # except Exception as e:
+    #   raise
+    c = card_setup_runner(card_setup)
     self.assertIsNotNone(c, msg='failure in Card constructor for simple configuration')
 
   def test_card_exception_bad_attr(self):
@@ -77,7 +90,7 @@ class TestCard(unittest.TestCase):
     try:
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 2"
+      # print "got BadCardParamsExepction on test 2"
       caught_exception = True
     except Exception as e:
       raise
@@ -99,7 +112,7 @@ class TestCard(unittest.TestCase):
     try:
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 3"
+      # print "got BadCardParamsExepction on test 3"
       caught_exception = True
     except Exception as e:
       raise
@@ -121,7 +134,7 @@ class TestCard(unittest.TestCase):
     try:
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 4"
+      # print "got BadCardParamsExepction on test 4"
       caught_exception = True
     except Exception as e:
       raise
@@ -141,7 +154,7 @@ class TestCard(unittest.TestCase):
     try:
       c = Card(**card_setup)
     except BadCardParamsExepction as e:
-      print "got BadCardParamsExepction on test 5"
+      # print "got BadCardParamsExepction on test 5"
       caught_exception = True
     except Exception as e:
       raise

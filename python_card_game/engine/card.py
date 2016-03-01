@@ -29,7 +29,7 @@ Attributes:
 # @Author: Mathew Cosgrove
 # @Date:   2016-01-21 11:29:33
 # @Last Modified by:   Mathew Cosgrove
-# @Last Modified time: 2016-01-31 03:22:50
+# @Last Modified time: 2016-03-01 01:32:36
 # REF: http://sphinxcontrib-napoleon.readthedocs.org/en/latest/example_google.html#example-google
 # REF: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html
 
@@ -83,10 +83,10 @@ class Card(object):
     attributes_are_bad = False
     #
     for attr in attr_dict.keys():
-      print"attr --", attr
+      # print "attr --", attr
       if attr != "effect":
         val = attr_dict[attr]
-        print "val --", val
+        # print "val --", val
         card_sum += val
         # checks inputs against card constraints
         if val < card_constraints[attr][0] or val > card_constraints[attr][1]:
